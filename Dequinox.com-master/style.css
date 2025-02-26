@@ -90,7 +90,7 @@ img {
 }
 
 code {
-	background-color: #ee6e73;
+	background-color: #f39d2c;
 	border-radius: 2px;
 	color: #fff;
 	padding: 2px 4px;
@@ -109,7 +109,7 @@ pre code {
 }
 
 del{
-	text-decoration-color: #ee6e73;
+	text-decoration-color: #ff810b;
 }
 
 kbd {
@@ -506,7 +506,7 @@ button:focus {
 
 #mu-hero .navbar-default {
 	background-color: #000;
-	border-color: #cc0022;
+	border-color: #f35207;
 	padding: 5px 0;
 }
 
@@ -533,7 +533,7 @@ button:focus {
 }
 
 .mu-navbar .mu-menu li a {
-	color: #8d231d;
+	color: #fc6018;
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
@@ -588,7 +588,7 @@ button:focus {
 }
 
 .mu-content {
-	color: #ff0202;
+	color: #ff9a02;
 	margin-bottom: 15px;
 	padding: 0;
 	z-index: 10;
