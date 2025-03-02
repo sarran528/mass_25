@@ -89,9 +89,9 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav mu-menu navbar-right">
 						<li><a href="#mu-hero">Home</a></li>
-						<li><a href="#mu-about">About Us</a></li>
+						<li><a href="#mu-about">About </a></li>
 						<li><a href="#mu-schedule">Events</a></li>
-						<li><a href="#mu-venue">Star Night</a></li>
+						<li><a href="#mu-venue">Showcase</a></li>
 						<li><a href="#mu-pricing">Gallery</a></li>
 						<li><a href="#mu-register">Register</a></li>
 						<!--<li><a href="#mu-sponsors">Sponsors</a></li>
@@ -700,11 +700,9 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="mu-register-area">
-
 							<div class="mu-title-area">
 								<h2 class="mu-title">Register</h2>
 								<p class="mu-content">Mark your calendars and get ready to be inspired!</p>
-
 								<a href="" target="_blank">
 									<button type="submit" id="" class="mu-reg-submit-btn">Register</button>
 								</a>
@@ -716,7 +714,6 @@
 											<h2 align="center"> 9566372450 </h2>
 										</a>
 									</div>
-
 									<div class="mu-pr-details">
 										<h1 align="center">Sarran. M</h1>
 										<a href="tel:+917904823782">
@@ -724,58 +721,6 @@
 										</a>
 									</div>
 								</div>
-								</center>
-								<br>
-								<div class="mu-register-content">
-									<form class="mu-register-form">
-
-										<div class="row">
-											<div class="col-md-6">
-												<div class="form-group">
-													<input type="text" class="form-control" autocomplete="off"
-														placeholder="Your Full Name" id="name" name="name" required="">
-												</div>
-											</div>
-
-											<div class="col-md-6">
-												<div class="form-group">
-													<input type="email" class="form-control" autocomplete="off"
-														placeholder="Enter Your Email" id="email" name="email"
-														required="">
-												</div>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-md-6">
-												<div class="form-group">
-													<input type="text" class="form-control" autocomplete="off"
-														placeholder="Your Phone Number" id="phone" name="telephone"
-														required="">
-												</div>
-											</div>
-											<div class="col-md-6">
-
-												<div class="form-group">
-													<select class="form-control" name="Category" id="Category">
-														<option value="0">General Information/Feedback</option>
-														<option value="1">Timing</option>
-														<option value="2">Events</option>
-														<option value="3">Others</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="form-group">
-											<textarea class="form-control" placeholder="Message" autocomplete="off"
-												id="message" name="message" required></textarea>
-										</div>
-
-										<button type="submit" id="contact-submit"
-											class="mu-reg-submit-btn">SUBMIT</button>
-									</form>
-								</div>
-
 							</div>
 						</div>
 					</div>
@@ -828,38 +773,6 @@
 	<!-- Custom js -->
 	<script type="text/javascript" src="assets/js/custom.js"></script>
 	<script type="text/javascript" src="assets/js/scripts.js"></script>
-	<script>
-		function sendForm(e) {
-			console.log("data passed");
-			$.post("contact_us/contact.php", {
-				subject: $('#Category option:selected').text(),
-				mobile: $('#phone').val(),
-				name: $('#name').val(),
-				email: $('#email').val(),
-				message: $('#message').val(),
-			},
-				function (data) {
-					$(".error-message").html(data);
-					console.log(data);
-				});
-		}
-
-		function clearForm() {
-			$('#Category').val('');
-			$('#phone').val('');
-			$('#name').val('');
-			$('#email').val('');
-			$('#message').val('');
-		}
-
-		$('#contact-submit').on('click', function (e) {
-			e.preventDefault();
-			sendForm();
-			window.alert('Thank You! Your Message was sent!');
-			clearForm();
-
-		});
-	</script>
 	<script>
 		function ragaRules() {
 			var x = document.getElementById("ragaRules");
