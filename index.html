@@ -64,8 +64,6 @@
 		<div class="loader-section section-left"></div>
 		<div class="loader-section section-right"></div>
 	</div>
-
-
 	<!-- Start Header -->
 	<header id="mu-hero" class="" role="banner">
 		<!-- Start menu  -->
@@ -80,7 +78,6 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-
 					<!-- Logo -->
 					<a class="navbar-brand" href="index.html"><img id="logo_image" src="assets/images/festLogo.png"></a>
 
@@ -105,18 +102,19 @@
 		</nav>
 		<!-- End menu -->
 
+		<!-- Start hero featured area -->
 		<div class="mu-hero-overlay">
 			<div id="bubble">
 			</div>
-			<!-- Start hero featured area -->
-			<canvas id="scene"></canvas>
-			<input id="copy" type="hidden" value="MASS 2k25" />
-			<div class="mu-event-counter-area">
-				<div id="mu-event-counter">
+			<canvas id="scene">
+				<input id="copy" type="hidden" value="MASS 2k25" />
+				<div class="mu-event-counter-area">
+					<div id="mu-event-counter">
+					</div>
 				</div>
-			</div>
-			<!-- End hero featured area -->
+			</canvas>
 		</div>
+		<!-- End hero featured area -->
 	</header>
 	<!-- End Header -->
 
@@ -138,19 +136,17 @@
 								</div>
 								<div class="col-md-6">
 									<div class="mu-about-right">
-										<h2 class="mu-title">About Us</h2>
-										<p class="mu-content">Dequinox 2018 , the cultural festival of JUET Guna is
-											widely renowned as the largest fest in central India. With a participation
-											roster exceeding over 1 hundred colleges across the academic demographic of
-											India, Dequinox is a glorious rendition of the ideals of innovation,
-											conception and determination to achieve high heights of success, and is a
-											phenomenal platform to nurture and inspire talent, while uniting a wide and
-											diverse participation pool under a single banner.</p>
-										<p class="mu-content">The 2018 Programme for Dequinox is poised to exceed all
-											expectations in keeping with its strong heritage and excelling in it's core
-											strength as a talent platform to drive excellence.</p>
-										<p class="mu-content"> We look forward to have an enriching experience with all
-											the participants. We can promise it will be entertaining too!</p>
+										<h2 class="mu-title">About MASS</h2>
+										<p class="mu-content">Motivational Aspects for Sparkling Stars, a cultural
+											extravaganza celebrating talent and aspirations. Brace yourself for an
+											empowering experience with influential speakers, successful alumni, and
+											industry mavericks sharing tales of resilience and triumph. Immerse in a
+											vibrant melange of performances, exhibitions, and workshops showcasing peer
+											creativity. Forge lasting connections, discover mentors, and embark on a
+											journey of self-discovery. MASS is where dreams soar, diversity thrives, and
+											ordinary individuals become extraordinary achievers. Unlock your potential,
+											step out of your comfort zone and craft a future as radiant as the stars.
+											Get inspired and get motivated at MASS! elves.</p>
 									</div>
 								</div>
 							</div>
@@ -1116,8 +1112,6 @@
 	</main>
 
 	<!-- End main content -->
-
-
 	<!-- Start footer -->
 	<footer id="mu-footer" role="contentinfo">
 		<div class="container">
@@ -1139,20 +1133,15 @@
 
 	</footer>
 	<!-- End footer -->
-
-
-
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<!-- Bootstrap -->
 	<script src="assets/js/bootstrap.min.js"></script>
 	<!-- Slick slider -->
 	<script type="text/javascript" src="assets/js/slick.min.js"></script>
 	<script src="assets/js/owl.carousel.min.js"></script>
-
 	<!-- Event Counter -->
 	<script type="text/javascript" src="assets/js/jquery.countdown.min.js"></script>
 	<!-- Ajax contact form  -->
@@ -1161,54 +1150,41 @@
 	<script type="text/javascript" src="assets/js/jquery.tmpl.min.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.elastislide.js"></script>
-
-
-
-
-
-
-
-
-
 	<!-- Custom js -->
 	<script type="text/javascript" src="assets/js/custom.js"></script>
 	<script type="text/javascript" src="assets/js/scripts.js"></script>
-	<!--
 	<script>
+		function sendForm(e) {
+			console.log("data passed");
+			$.post("contact_us/contact.php", {
+				subject: $('#Category option:selected').text(),
+				mobile: $('#phone').val(),
+				name: $('#name').val(),
+				email: $('#email').val(),
+				message: $('#message').val(),
+			},
+				function (data) {
+					$(".error-message").html(data);
+					console.log(data);
+				});
+		}
 
-function sendForm(e){
-  console.log("data passed");
-  $.post("contact_us/contact.php", {
-    subject: $('#Category option:selected').text(),
-    mobile: $('#phone').val(),
-    name: $('#name').val(),
-    email: $('#email').val(),
-    message: $('#message').val(),
-  },
-  function(data){
-    $(".error-message").html(data);
-    console.log(data);
-  });
-}
+		function clearForm() {
+			$('#Category').val('');
+			$('#phone').val('');
+			$('#name').val('');
+			$('#email').val('');
+			$('#message').val('');
+		}
 
-function clearForm(){
-    $('#Category').val('');
-    $('#phone').val('');
-    $('#name').val('');
-    $('#email').val('');
-    $('#message').val('');
-}
+		$('#contact-submit').on('click', function (e) {
+			e.preventDefault();
+			sendForm();
+			window.alert('Thank You! Your Message was sent!');
+			clearForm();
 
-$('#contact-submit').on('click', function(e){
-  e.preventDefault();
-    sendForm();
-    window.alert('Thank You! Your Message was sent!');
-    clearForm();  
-  
-});
-
-</script>
--->
+		});
+	</script>
 	<script>
 		function ragaRules() {
 			var x = document.getElementById("ragaRules");
@@ -1218,7 +1194,6 @@ $('#contact-submit').on('click', function(e){
 				x.style.display = "none";
 			}
 		}
-
 		function droppingRules() {
 			var y = document.getElementById("droppingRules");
 			if (y.style.display === "none") {
@@ -1228,10 +1203,5 @@ $('#contact-submit').on('click', function(e){
 			}
 		}
 	</script>
-
-
-
-
 </body>
-
 </html>
