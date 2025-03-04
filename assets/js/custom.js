@@ -59,7 +59,7 @@ var canvas = document.querySelector("#scene"),
 	var ww = canvas.width = window.innerWidth;
 	var wh = canvas.height = window.innerHeight;
 
-if(ww > 550){
+if(ww > 0){
 
 	function Particle(x,y){
 		this.x =  Math.random()*ww;
