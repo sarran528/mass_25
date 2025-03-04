@@ -589,10 +589,12 @@ button:focus {
 
 .mu-content {
 	color: #ff9102;
-	margin-bottom: 15px;
-	padding: 0;
-	z-index: 10;
-	font-family: 'comfortaaregular';
+margin-bottom: 15px;
+padding: 0;
+z-index: 10;
+font-family: 'comfortaaregular';
+font-weight: 300; /* Adjust this value as needed */
+
 }
 
 	
